@@ -2,6 +2,7 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import { Component } from "react";
 import { FirstPage, Login, Mainpage, Mypage, Page, Signup, MyChart } from "./pages";
+import WritingPage from "./pages/WritingPage";
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Mainpage" element={<Mainpage/>} />
           <Route path="/MyChart" element={<MyChart/>} />
+          <Route path="/WritingPage" element={<WritingPage />} />
         </Routes>
       </div>
     );
