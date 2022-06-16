@@ -5,6 +5,9 @@ import profileImg from '../assets/profileImg.png';
 import Capstone from '../assets/Capstone.jpg'
 import menu from '../assets/menu.png';
 import Navbar from '../components/Navbar';
+import { Link } from "react-router-dom";
+import plus from "../assets/plus.png"
+import WritingPage from "./WritingPage";
 
 const data = [
   {
@@ -60,7 +63,7 @@ const Mainpage = () => {
 
       <Navbar />
 
-      <div className="headerSort"></div>  
+      <div className="headerSort"></div>
 
       <div class="postDiv">
         <div className="postSort">
@@ -78,6 +81,12 @@ const Mainpage = () => {
           }
         </div>
       </div>
+
+      <div className="btn">
+          <Link to='/WritingPage'>
+            <img src={plus} />
+          </Link>
+        </div>
     </div>
   )
 }
