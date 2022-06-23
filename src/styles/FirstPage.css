@@ -46,3 +46,17 @@
 .main p {
     font-size: 20px;
 }
+
+.imgSort {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.main h2 {
+    font-size: 35px;
+}
+
+.main p {
+    font-size: 20px;
+}

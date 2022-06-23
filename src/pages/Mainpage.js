@@ -1,13 +1,9 @@
 import React from "react";
 import '../styles/Mainpage.css';
-import logoImg from '../assets/logoImg.png';
-import profileImg from '../assets/profileImg.png';
-import Capstone from '../assets/Capstone.jpg'
-import menu from '../assets/menu.png';
+import Capstone from '../assets/Capstone.jpg';
 import Navbar from '../components/Navbar';
 import { Link } from "react-router-dom";
-import plus from "../assets/plus.png"
-import WritingPage from "./WritingPage";
+import plus from "../assets/plus2.png";
 
 const data = [
   {
@@ -32,11 +28,6 @@ const data = [
   },
   {
     id: 5,
-    src: Capstone,
-    title: 'title',
-  },
-  {
-    id: 6,
     src: Capstone,
     title: 'title',
   },
@@ -83,12 +74,13 @@ const Mainpage = () => {
       </div>
 
       <div className="btn">
-          <Link to='/WritingPage'>
-            <img src={plus} />
-          </Link>
-        </div>
+        <Link to='/WritingPage'>
+          <img src={plus} />
+        </Link>
+      </div>
+      
     </div>
   )
 }
 
-export default Mainpage
+export default Mainpage;

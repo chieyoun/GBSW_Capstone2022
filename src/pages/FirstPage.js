@@ -21,7 +21,9 @@ const FirstPage = () => {
                 <h1>LearnChart</h1>
             </div>
             <div className="main">
-                <img className="image" alt="photo1" src="img/graph2.png"/>
+                <div className="imgSort">
+                    <img className="image" alt="photo1" src="img/graph2.png"/>
+                </div>
                 <h2>LearnChart란?</h2>
                 <p>저희가 개발하는 LearnCheck는 코딩 혹은 기타 프로젝트 등 자신이 했는 활동을 기록하며 활동을 그래프나 표로 나타내 수치를
                     보여주면서 일의 능률을 높혀줍니다.</p>

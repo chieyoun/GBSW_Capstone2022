@@ -39,24 +39,16 @@ function WritingPage() {
 
   return (
     <div className="App">
-      <h1>글 쓰는 곳임</h1>
-      <div className='movie-container'>
-        {viewContent.map(element =>
-          <div style={{ border: '1px solid #333' }}>
-            <h2>{element.title}</h2>
-            <div>
-              {ReactHtmlParser(element.content)}
-            </div>
-          </div>
-        )}
-      </div>
+      
       <div className='form-wrapper'>
-        <input className="title-input"
-          type='text'
-          placeholder='제목'
-          onChange={getValue}
-          name='title'
-        />
+        <div className='titleSort'>
+          <input className="title-input"
+            type='text'
+            placeholder='제목'
+            onChange={getValue}
+            name='title'
+          />
+        </div>
         <CKEditor
           editor={ClassicEditor}
           data=""

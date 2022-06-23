@@ -21,22 +21,16 @@ header div {
     height: 300px;
 }
 
-
-
-
 .postDiv {
     display: inline-block;
     text-align: center;
-    width: 80%;
+    width: 70%;
     vertical-align: top;
 }
 
 .post {
     display: inline-block;
     width: 300px;
-    padding-bottom: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .post Img {
@@ -59,10 +53,6 @@ header div {
     cursor: pointer;
 }
 
-
-
-
-
 .img {
     text-align: center;
     border: 1px solid black;
@@ -71,11 +61,6 @@ header div {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-
-
-
-
-
 
 .arrow {
     width: 50px;
@@ -128,12 +113,12 @@ header div {
     padding: 18px;
 }
 
-
 .btn {
-    display: inline-block;
+    position: fixed;
+    bottom: 10%;
+    left: 90%;
     width: 70px;
     height: 70px;
     background-color: #B4E197;
     border-radius: 50px;
-    margin-left: 90%;
 }

@@ -4,6 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 
 import menu from '../assets/menu.png';
 // import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import logo from '../assets/logo.png';
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -40,12 +41,14 @@ export default function Example() {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    src={logo}
+                    // src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    src={logo}
+                    // src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                     alt="Workflow"
                   />
                 </div>
