@@ -2,11 +2,6 @@
     background-color: #B4E197;
     padding: 10px;
 }
-.header h1 {
-    color: white;
-    text-align: center;
-    background-color: #B4E197;
-}
 .btn1 {
     color: white;
     height: 4px;
@@ -35,10 +30,6 @@
     background-color: #B4E197;
 }
 
-.main {
-    margin-top: 100px;
-    text-align: center;
-}
 .main img {
     height: 400px;
     width: 400px;
@@ -46,3 +37,61 @@
 .main p {
     font-size: 20px;
 }
+<<<<<<< Updated upstream
+=======
+
+.imgSort {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.main h2 {
+    font-size: 35px;
+}
+
+.main p {
+    font-size: 20px;
+}
+
+
+
+
+
+.sort {
+    height: 110px;
+}
+
+.divSort {
+    display: flex;
+}
+
+.imgTitleSort {
+    display: inline-block;
+    margin-left: 16%;
+}
+
+.title {
+    padding-top: 100px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.textSort {
+    display: inline-block;
+    margin-left: 3%;
+
+    padding-top: 11%;
+}
+
+.subTitle {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.text {
+    font-size: 20px;
+}
+>>>>>>> Stashed changes

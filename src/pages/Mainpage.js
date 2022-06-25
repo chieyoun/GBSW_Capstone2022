@@ -37,12 +37,15 @@ const data = [
     src: Capstone,
     title: 'title',
   },
+<<<<<<< Updated upstream
 
   {
     id: 7,
     src: Capstone,
     title: 'title',
   },
+=======
+>>>>>>> Stashed changes
 ]
 
 const Mainpage = () => {
@@ -84,6 +87,20 @@ const Mainpage = () => {
           }
         </div>
       </div>
+<<<<<<< Updated upstream
+=======
+
+      <div className="btn">
+        <Link to='/WritingPage'>
+          <img src={plus} />
+        </Link>
+      </div>
+
+      <footer>
+        
+      </footer>
+      
+>>>>>>> Stashed changes
     </div>
   )
 }

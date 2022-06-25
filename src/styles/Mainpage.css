@@ -126,4 +126,21 @@ header div {
     border-radius: 100%;
     cursor: pointer;
     padding: 18px;
+<<<<<<< Updated upstream
+=======
+}
+
+.btn {
+    position: fixed;
+    bottom: 10%;
+    left: 90%;
+    width: 70px;
+    height: 70px;
+    background-color: #B4E197;
+    border-radius: 50px;
+}
+
+footer {
+    padding-top: 200px;
+>>>>>>> Stashed changes
 }
