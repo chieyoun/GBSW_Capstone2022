@@ -5,6 +5,7 @@ const path = require('path');
 const session = require('express-session');
 const passport = require('passport');
 const cors = require('cors');
+const helmet = require('helmet');
 require('dotenv').config();
 
 const app = express();
@@ -26,7 +27,7 @@ sequelize.sync({ force: false })
     console.error(err);
   });
 
-
+app.use(helmet());
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -46,8 +47,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use('/auth', authRouter);
-app.use('/board', postRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/post', postRouter);
 
 app.listen(3001, () => {
   console.log('listening on localhost:3001');

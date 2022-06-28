@@ -27,13 +27,12 @@ const post = async (req, res) => {
   const {title, content} = req.body;
 
   try {
-    Post.create({
+    await Post.create({
       title,
       img : req.file.path,
       content,
       UserId : req.user.id
     })
-
     res.status(200).json({ message : "글 등록 성공"});
   } catch (err) {
     console.error(err);

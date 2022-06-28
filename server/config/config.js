@@ -9,7 +9,15 @@ const development = {
   host: "localhost",
   dialect: "mysql",
   port: 3307,
-  timezone : "+09:00"
+  timezone : "+09:00",
+  dialectOptions: {
+    charset: 'utf8mb4',
+    dateStrings: true,
+    typeCast: true
+  },
+  define: {
+    timestamps: true
+  }
 };
 
 const production = {

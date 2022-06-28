@@ -1,6 +1,6 @@
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
-const controller = require('../controllers/auth');
+const controller = require('../controllers/auth.controller');
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');

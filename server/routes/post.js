@@ -3,7 +3,7 @@ const multer = require('multer')
 const path = require('path')
 const fs = require('fs')
 const { isLoggedIn } = require('./middlewares');
-const controller = require('../controllers/post');
+const controller = require('../controllers/post.controller');
 const router = express.Router();
 
 try {
@@ -30,7 +30,7 @@ const upload = multer({
 
 router.get('/', controller.viewAll);
 router.get('/:id', controller.view);
-router.post('/write', isLoggedIn, upload.single('img'), controller.post);
+router.post('/', isLoggedIn, upload.single('img'), controller.post);
 /* router.post('/edit/:id', isLoggedIn, controller.edit);
 router.get('/remove/:id', isLoggedIn, controller.remove); */
 
