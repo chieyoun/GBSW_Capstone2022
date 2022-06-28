@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< Updated upstream
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { User, board } = require('../models'); 
@@ -35,6 +36,31 @@ router.post('/login', async (req, res, next) => {
   User.findOne({
     where: {
       email,
+=======
+const { isLoggedIn, isNotLoggedIn } = require('./middlewares');
+const controller = require('../controllers/auth.controller');
+const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
+
+const router = express.Router();
+
+try {
+  fs.readdirSync('profiles');
+} catch (err) {
+  console.error('profiles 폴더가 없어 profiles 폴더를 생성합니다');
+  fs.mkdirSync('profiles')
+}
+
+const upload = multer({
+  storage : multer.diskStorage({
+    destination(req, file, cb){
+      cb(null, 'profiles/');
+    },
+    filename(req, file, cb){
+      const ext = path.extname(file.originalname);
+      cb(null, path.basename(file.originalname, ext) + Date.now() + ext);
+>>>>>>> Stashed changes
     },
   }).then((user) => {
     if (!user) {
