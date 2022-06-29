@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import '../styles/Login_Signup.css';
+import '../styles/Login.css';
 
 const Login = () => {
   const [id, setId] = useState('');
@@ -14,22 +14,16 @@ const Login = () => {
   }
 
   return(
-    <div className = "center">
-    <div className = "Login">
-      <form>
-      <h2>Login</h2>
-      <div>
+    <div className="container">
+      <div className="left">
+        <h1>LearnChart</h1>
+        <span>쓰지마유</span>
+      </div>
+      <div className="right">
+        <div className="right_login">
         <input type="text" value={id} onChange = {onIdHandler} placeholder = "아이디" />
-      </div>
-      <div>
-      <input type="password" value={pw} onChange = {onpwHandler} placeholder = "비밀번호" />
-      </div>
-      <div>
-        <Link to="/Mainpage">
-        <button>로그인</button>
-        </Link>
-      </div>
-      </form>
+        <input type="password" value={pw} onChange = {onpwHandler} placeholder = "비밀번호" />
+        </div>
       </div>
     </div>
   )
