@@ -15,15 +15,18 @@ const Login = () => {
 
   return(
     <div className="container">
+      <div className="form_container">
       <div className="left">
         <h1>LearnChart</h1>
-        <span>쓰지마유</span>
+        <span>이 웹사이트 쓰지마유</span>
       </div>
       <div className="right">
         <div className="right_login">
         <input type="text" value={id} onChange = {onIdHandler} placeholder = "아이디" />
         <input type="password" value={pw} onChange = {onpwHandler} placeholder = "비밀번호" />
         <button type="submit">로그인</button>
+        
+        </div>
         </div>
       </div>
     </div>
