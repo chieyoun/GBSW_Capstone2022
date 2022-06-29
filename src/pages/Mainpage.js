@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/Mainpage.css';
 import logoImg from '../assets/logoImg.png';
+import plus from '../assets/plus.png'
 import profileImg from '../assets/profileImg.png';
 import Capstone from '../assets/Capstone.jpg'
 import menu from '../assets/menu.png';
