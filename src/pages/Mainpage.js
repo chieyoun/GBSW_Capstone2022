@@ -5,6 +5,7 @@ import profileImg from '../assets/profileImg.png';
 import Capstone from '../assets/Capstone.jpg'
 import menu from '../assets/menu.png';
 import Navbar from '../components/Navbar';
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -37,17 +38,7 @@ const data = [
     src: Capstone,
     title: 'title',
   },
-<<<<<<< Updated upstream
-
-  {
-    id: 7,
-    src: Capstone,
-    title: 'title',
-  },
-=======
->>>>>>> Stashed changes
 ]
-
 const Mainpage = () => {
   return (
     <div className="center1">
@@ -87,9 +78,6 @@ const Mainpage = () => {
           }
         </div>
       </div>
-<<<<<<< Updated upstream
-=======
-
       <div className="btn">
         <Link to='/WritingPage'>
           <img src={plus} />
@@ -100,7 +88,6 @@ const Mainpage = () => {
         
       </footer>
       
->>>>>>> Stashed changes
     </div>
   )
 }

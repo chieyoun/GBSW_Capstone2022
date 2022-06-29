@@ -1,4 +1,4 @@
-export { default as FirstPage } from './FirstPage'
+
 // export { default as Join } from './Join'
 export { default as Login } from './Login'
 export { default as Mainpage } from './Mainpage'

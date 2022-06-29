@@ -11,8 +11,7 @@ import {
 } from 'chart.js';
 import { Chart } from 'react-chartjs-2'
 import Navbar from '../components/Navbar'
-import '../styles/MyPage.css'
-import './Login' 
+import '../styles/Mypage.css'
 import profile from '../assets/profile.png'
 ChartJS.register(
   LinearScale,
