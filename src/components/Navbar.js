@@ -9,7 +9,7 @@ const navigation = [
   { name: 'LearnChart', href: '#', current: true },
   { name: '메인페이지', href: '/Mainpage', current: false },
   { name: '마이페이지', href: '/Mypage', current: false },
-  { name: 'Team Github', href: 'https://github.com/chieyoun/GBSW_Capstone2022', current: false },
+  { name: 'Team Github', href: 'https://github.com/chieyoun/GBSW_Capstone2022', current: false},
 ]
 
 function classNames(...classes) {
