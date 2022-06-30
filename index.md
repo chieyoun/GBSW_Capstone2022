@@ -49,7 +49,7 @@
 
 
 ### 3. 데이터베이스 설계
-
+![DB](https://user-images.githubusercontent.com/81201101/176598997-109d2506-ca3b-47ce-b8c8-afc35b5f9007.png)
 
 ### 4. 기능 구현
 
