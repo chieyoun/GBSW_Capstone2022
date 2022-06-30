@@ -6,6 +6,9 @@ const session = require('express-session');
 const passport = require('passport');
 const cors = require('cors');
 const helmet = require('helmet');
+
+const port = process.env.PORT || 3001;
+
 require('dotenv').config();
 
 const app = express();
@@ -50,6 +53,6 @@ app.use(passport.session());
 app.use('/api/auth', authRouter);
 app.use('/api/post', postRouter);
 
-app.listen(3001, () => {
+app.listen(port, () => {
   console.log('listening on localhost:3001');
 })
