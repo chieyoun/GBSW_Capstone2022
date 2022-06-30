@@ -51,7 +51,7 @@
 
 
 ### 3. 데이터베이스 
-![DB](https://user-images.githubusercontent.com/81201101/176598693-8e5419bb-c566-40c6-8cec-a8519f371163.png)
+![DB](https://user-images.githubusercontent.com/81201101/176598997-109d2506-ca3b-47ce-b8c8-afc35b5f9007.png)
 
 
 
