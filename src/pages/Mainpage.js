@@ -54,11 +54,6 @@ const data = [
     src: Capstone,
     title: 'title',
   },
-  {
-    id: 10,
-    src: Capstone,
-    title: 'title',
-  },
 ]
 const Mainpage = () => {
   return (
