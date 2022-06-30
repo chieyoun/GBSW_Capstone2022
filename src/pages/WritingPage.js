@@ -1,6 +1,6 @@
 //TODO 오류잡기: 이미지 업로드시 TypeError: Failed to fetch 
 import { useState, useEffect } from 'react';
-// import '../styles/WritingPage.css';
+import '../styles/WritingPage.css';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import ReactHtmlParser from 'html-react-parser';
@@ -76,17 +76,6 @@ function WritingPage() {
 
   return (
     <div className="App">
-      <h1>글 쓰는 곳임</h1>
-      <div className='movie-container'>
-        {viewContent.map(element =>
-          <div style={{ border: '1px solid #333' }}>
-            <h2>{element.title}</h2>
-            <div>
-              {ReactHtmlParser(element.content)}
-            </div>
-          </div>
-        )}
-      </div>
       <div className='form-wrapper'>
         <input className="title-input"
           type='text'
