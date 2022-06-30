@@ -57,7 +57,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-green-500 text-white' : 'text-gray-300 hover:bg-green-300 hover:text-white',
+                          item.current ? 'bg-green-600 text-white' : 'text-gray-300 hover:bg-green-400 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
