@@ -51,7 +51,7 @@
 
 
 ### 3. 데이터베이스 설계
-![DB설계](https://user-images.githubusercontent.com/81201101/160826491-e3d45be0-9e5a-4999-9bb9-3ba6fa9c6437.png)
+
 
 
 ### 4. 기능 구현
