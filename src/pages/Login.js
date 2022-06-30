@@ -19,6 +19,7 @@ const Login = () => {
       <div className="left">
         <h1>LearnChart</h1>
         <span>이 웹사이트 쓰지마유</span>
+        <span>완성 안됐으니까</span>
       </div>
       <div className="right">
         <div className="right_login">
