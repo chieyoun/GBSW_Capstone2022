@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 import {
   Chart as ChartJS,
@@ -57,7 +58,8 @@ const MyChart = () => {
     
     return (
         <div>
- <Chart type='bar' data={data} />
+          <Navbar />
+          <Chart type='bar' data={data} />
         </div>
     )
 }

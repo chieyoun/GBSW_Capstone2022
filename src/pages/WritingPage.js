@@ -1,5 +1,6 @@
 //TODO 오류잡기: 이미지 업로드시 TypeError: Failed to fetch 
 import { useState, useEffect } from 'react';
+import '../styles/WritingPage.css';
 // import '../styles/WritingPage.css';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
@@ -7,6 +8,7 @@ import ReactHtmlParser from 'html-react-parser';
 import Axios from 'axios';
 const API_URL = "https://77em4-8080.sse.codesandbox.io";
 const UPLOAD_ENDPOINT = "upload_files";
+
 
 function WritingPage() {
   const [movieContent, setMovieContent] = useState({
@@ -76,16 +78,13 @@ function WritingPage() {
 
   return (
     <div className="App">
-      
       <div className='form-wrapper'>
-        <div className='titleSort'>
-          <input className="title-input"
-            type='text'
-            placeholder='제목'
-            onChange={getValue}
-            name='title'
-          />
-        </div>
+        <input className="title-input"
+          type='text'
+          placeholder='제목'
+          onChange={getValue}
+          name='title'
+        />
         <CKEditor
         config={{
           extraPlugins: [uploadPlugin]

@@ -13,18 +13,9 @@
     "chart.js": "^3.8.0",
     "faker": "^6.6.6",
     "global": "^4.4.0",
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
     "html-react-parser": "^2.0.0",
->>>>>>> 9e4d41cc20cebc0b3a1c26bde5a3bbeddee5b1b4
     "multer": "^1.4.5-lts.1",
-=======
     "html-react-parser": "^2.0.0",
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     "react": "^18.0.0",
     "react-chartjs-2": "^4.2.0",
     "react-dom": "^18.0.0",
