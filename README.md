@@ -50,7 +50,8 @@
 5. reactJS 
 
 
-### 3. 데이터베이스 설계
+### 3. 데이터베이스 
+![DB](https://user-images.githubusercontent.com/81201101/176598693-8e5419bb-c566-40c6-8cec-a8519f371163.png)
 
 
 
