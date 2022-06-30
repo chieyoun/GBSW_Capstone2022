@@ -9,7 +9,7 @@ const navigation = [
   { name: 'LearnChart', href: '#', current: true },
   { name: '메인페이지', href: '/Mainpage', current: false },
   { name: '마이페이지', href: '/Mypage', current: false },
-  { name: 'Team Github', href: 'https://github.com/chieyoun/GBSW_Capstone2022', current: false },
+  { name: 'Team Github', href: 'https://github.com/chieyoun/GBSW_Capstone2022', current: false},
 ]
 
 function classNames(...classes) {
@@ -20,7 +20,7 @@ export default function Example() {
   return (
     <Disclosure as="nav" className="bg-Zinc-900">
       {({ open }) => (
-        <>
+        <div>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -95,26 +95,6 @@ export default function Example() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
                           href="#"
                           className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
@@ -147,7 +127,7 @@ export default function Example() {
             ))}
           </div>
         </Disclosure.Panel>
-      </>
+      </div>
     )}
   </Disclosure>
 )
