@@ -31,6 +31,11 @@ const data = [
     src: Capstone,
     title: 'title',
   },
+  {
+    id: 5,
+    src: Capstone,
+    title: 'title',
+  },
 ]
 
 const Mainpage = () => {

@@ -16,6 +16,7 @@ class App extends Component {
           <Route path="/MyChart" element={<MyChart/>} />
           <Route path="/WritingPage" element={<WritingPage />} />
           <Route path="/qqqq" element={<WritingPage/>} />
+          <Route path="/mypage" element={<Mypage />} />
         </Routes>
       </div>
     );
