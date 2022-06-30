@@ -13,7 +13,7 @@ class App extends Component {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Mainpage" element={<Mainpage/>} />
           <Route path="/WritingPage" element={<WritingPage/>} />
-          
+          <Route path="/WritingPage" element={<WritingPage/>} />
         </Routes>
       </div>
     );
