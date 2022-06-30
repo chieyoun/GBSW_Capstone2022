@@ -29,7 +29,6 @@ const post = async (req, res) => {
   try {
     await Post.create({
       title,
-      img : req.file.path,
       content,
       UserId : req.user.id
     })

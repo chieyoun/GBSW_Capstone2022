@@ -15,7 +15,6 @@ const join = async (req, res, next) => {
       idx,
       name,
       password: hash,
-      img : req.file.path,
     });
     res.status(200).json({success : "회원가입 성공"})
   } catch (err) {
