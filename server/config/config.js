@@ -8,7 +8,7 @@ const development = {
   database: "capstonedb",
   host: "localhost",
   dialect: "mysql",
-  port: 3307,
+  port: 3306,
   timezone : "+09:00",
   dialectOptions: {
     charset: 'utf8mb4',

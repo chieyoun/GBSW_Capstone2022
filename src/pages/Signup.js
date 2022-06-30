@@ -1,5 +1,6 @@
 import React, {Profiler, useState} from "react";
 import '../styles/Login_Signup.css';
+import axios from "axios";
 
 const Signup = () => {
     const [id, setId] = useState('');
@@ -31,6 +32,19 @@ const Signup = () => {
             console.log("아이디: " + id);
             console.log("비밀번호: " + pw);
             console.log("생년월일: " + bdate);
+
+            const body = {
+                idx: id,
+                name: name,
+                password : pw,
+                birthday: bdate,
+            }
+
+            axios.post("/api/auth/join", body, {withCredentials: true})
+            .then((res) => {
+                console.log(res);
+              })
+
             alert("회원가입 완료");
         }
 
@@ -38,9 +52,9 @@ const Signup = () => {
 
     return (
         <div className="center">
-            <div className="signippage">
+            <div className="signppage">
                 <form>
-                    <h2>Signup</h2>
+                    <h2>회원가입</h2>
                     <div>
                         <input className="Name" type="text" value={name} onChange={onNameHandler} placeholder="*이름"/><br/>
                     </div>
