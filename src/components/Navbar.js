@@ -6,10 +6,10 @@ import menu from '../assets/menu.png';
 // import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: '게시판', href: '#', current: true },
-  { name: '그래프', href: '/MyChart', current: false },
-  //{ name: 'Projects', href: '#', current: false },
-  //{ name: 'Calendar', href: '#', current: false },
+  { name: 'LearnChart', href: '#', current: true },
+  { name: '메인페이지', href: '/Mainpage', current: false },
+  { name: '마이페이지', href: '/Mypage', current: false },
+  { name: 'Team Github', href: 'https://github.com/chieyoun/GBSW_Capstone2022', current: false },
 ]
 
 function classNames(...classes) {
