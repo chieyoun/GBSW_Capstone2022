@@ -39,6 +39,26 @@ const data = [
     src: Capstone,
     title: 'title',
   },
+  {
+    id: 7,
+    src: Capstone,
+    title: 'title',
+  },
+  {
+    id: 8,
+    src: Capstone,
+    title: 'title',
+  },
+  {
+    id: 9,
+    src: Capstone,
+    title: 'title',
+  },
+  {
+    id: 10,
+    src: Capstone,
+    title: 'title',
+  },
 ]
 const Mainpage = () => {
   return (
@@ -84,10 +104,6 @@ const Mainpage = () => {
           <img src={plus} />
         </Link>
       </div>
-
-      <footer>
-        
-      </footer>
       
     </div>
   )

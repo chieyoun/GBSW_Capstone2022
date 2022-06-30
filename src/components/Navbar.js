@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 
 import menu from '../assets/menu.png';
+import logo from '../assets/LogoImg (2).png';
 // import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
@@ -40,12 +41,12 @@ export default function Example() {
               <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    src={logo}
                     alt="Workflow"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    src={logo}
                     alt="Workflow"
                   />
                 </div>
@@ -56,7 +57,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-green-900 text-white' : 'text-gray-300 hover:bg-green-700 hover:text-white',
+                          item.current ? 'bg-green-500 text-white' : 'text-gray-300 hover:bg-green-300 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
