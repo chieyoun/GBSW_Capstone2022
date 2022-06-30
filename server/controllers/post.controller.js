@@ -1,6 +1,6 @@
 const { Post } = require('../models');
 
-const viewAll = async (req, res) => {
+const getPosts = async (req, res) => {
   try {
     const write = await Post.findAll();
     res.status(200).json(write)
@@ -10,7 +10,7 @@ const viewAll = async (req, res) => {
   }
 }
 
-const view = async (req, res) => {
+const getPost = async (req, res) => {
   const id = req.params.id;
   try {
     const write = await Post.findOne({
@@ -71,4 +71,4 @@ const remove = async (req, res) => {
 }
 
 
-module.exports = { viewAll, view, post, edit, remove };
+module.exports = { getPosts, getPost, post, edit, remove };

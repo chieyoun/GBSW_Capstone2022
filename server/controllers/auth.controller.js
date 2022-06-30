@@ -4,11 +4,11 @@ const { User } = require('../models');
 
 
 const join = async (req, res, next) => {
-  const { idx, name, password, birthday } = req.body;
+  const { idx, name, password } = req.body;
   try {
     const exUser = await User.findOne({ where: { idx }});
     if(exUser) {
-      return res.status(400).json({message : "이메일이 존재합니다"});
+      return res.status(400).json({message : "아이디가 존재합니다"});
     }
     const hash = await bcrypt.hash(password, 12);
     await User.create({
@@ -16,7 +16,6 @@ const join = async (req, res, next) => {
       name,
       password: hash,
       img : req.file.path,
-      birthday,
     });
     res.status(200).json({success : "회원가입 성공"})
   } catch (err) {
