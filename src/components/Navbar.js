@@ -3,13 +3,14 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 
 import menu from '../assets/menu.png';
+import logo from '../assets/LogoImg (2).png';
 // import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: '게시판', href: '#', current: true },
-  { name: '그래프', href: '/MyChart', current: false },
-  //{ name: 'Projects', href: '#', current: false },
-  //{ name: 'Calendar', href: '#', current: false },
+  { name: 'LearnChart', href: '#', current: true },
+  { name: '메인페이지', href: '/Mainpage', current: false },
+  { name: '마이페이지', href: '/Mypage', current: false },
+  { name: 'Team Github', href: 'https://github.com/chieyoun/GBSW_Capstone2022', current: false},
 ]
 
 function classNames(...classes) {
@@ -20,7 +21,7 @@ export default function Example() {
   return (
     <Disclosure as="nav" className="bg-Zinc-900">
       {({ open }) => (
-        <>
+        <div>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -40,12 +41,12 @@ export default function Example() {
               <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    src={logo}
                     alt="Workflow"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    src={logo}
                     alt="Workflow"
                   />
                 </div>
@@ -56,7 +57,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-green-900 text-white' : 'text-gray-300 hover:bg-green-700 hover:text-white',
+                          item.current ? 'bg-green-500 text-white' : 'text-gray-300 hover:bg-green-300 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -95,26 +96,6 @@ export default function Example() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
                           href="#"
                           className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
@@ -147,7 +128,7 @@ export default function Example() {
             ))}
           </div>
         </Disclosure.Panel>
-      </>
+      </div>
     )}
   </Disclosure>
 )
