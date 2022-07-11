@@ -40,3 +40,15 @@
     height: 50px;
     
 }
+.signppage span{
+    text-align: center;
+    font-size: small;
+    color: gray;
+}
+
+.signppage p{
+    text-align: center;
+    margin-top: 5px;
+    font-size: small;
+    color: gray;
+}

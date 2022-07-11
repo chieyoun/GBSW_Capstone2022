@@ -1,6 +1,7 @@
 import React, {Profiler, useState} from "react";
 import '../styles/Login_Signup.css';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
     const [id, setId] = useState('');
@@ -26,7 +27,7 @@ const Signup = () => {
     };
     const onBtnClick = (e) => {
         if (pw !== pwCheck) {
-            alert("비밀번호를 다시 확인 해주세요");
+            alert("비밀번호를 다시 확인 해주세요"); 
         } else {
             console.log("이름: " + name);
             console.log("아이디: " + id);
@@ -39,7 +40,6 @@ const Signup = () => {
                 password : pw,
                 birthday: bdate,
             }
-
             axios.post("/api/auth/join", body, {withCredentials: true})
             .then((res) => {
                 console.log(res);
@@ -53,7 +53,7 @@ const Signup = () => {
     return (
         <div className="center">
             <div className="signppage">
-                <form>
+                <form onSubmit={onBtnClick}>
                     <h2>회원가입</h2>
                     <div>
                         <input className="Name" type="text" value={name} onChange={onNameHandler} placeholder="*이름"/><br/>
@@ -66,7 +66,9 @@ const Signup = () => {
                             onChange={onIdHandler}
                             minLength='5'
                             maxLength='16'
-                            placeholder="*아이디(5~16자)"/><br/>
+                            placeholder="*아이디(5~16자)"
+                            required
+                            /><br/>
                     </div>
                     <div>
                         <input
@@ -75,6 +77,7 @@ const Signup = () => {
                             value={pw}
                             onChange={onPwHandler}
                             maxLength='12'
+                            required
                             placeholder="*비밀번호(1~12자)"/><br/>
                     </div>
                     <div>
@@ -84,13 +87,18 @@ const Signup = () => {
                             value={pwCheck}
                             onChange={onCpwHandler}
                             maxLength='12'
+                            required
                             placeholder="*비밀번호 확인"/><br/>
                     </div>
                     <div>
-                        <input type="text" placeholder="생년월일(ex-2005.01.01)" value={bdate} onChange={onBdateHandler}/>
+                        <input required type="text" placeholder="생년월일(ex-2005.01.01)" value={bdate} onChange={onBdateHandler}/>
                     </div>
                     <div>
-                        <button type="submit" onClick={onBtnClick}>회원 가입</button>
+                        <button type="submit" >회원 가입</button>
+                        <p>계정이 있으신가요?</p>
+                        <Link to='/'>
+                            <p>로그인</p>
+                        </Link>
                     </div>
                 </form>
             </div>
