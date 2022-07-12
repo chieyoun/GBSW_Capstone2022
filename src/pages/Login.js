@@ -40,14 +40,19 @@ const Login = () => {
                     </div>
                     <div className="right">
                         <div className="rightInput">
-                        <input type="text" placeholder="아이디"/>
-                        <input type= "password" placeholder="비밀번호"/>
+                            <input type="text" placeholder="아이디"/>
+                            <input type="password" placeholder="비밀번호"/>
                         </div>
-                    <div className="rightBtn">
-                        <Link to="/mainpage">
-                        <button type="submit">로그인</button>
-                        </Link>
-                    </div>
+                        <div className="rightBtn">
+                            <Link to="/mainpage">
+                                <button type="submit">로그인</button>
+                            </Link>
+                            <p>계정이 없으신가요?</p>
+                            <Link to="/signup">
+                                <p>회원가입</p>
+                            </Link>
+
+                        </div>
                     </div>
                 </div>
             </div>
