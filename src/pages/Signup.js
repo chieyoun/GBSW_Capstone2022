@@ -8,7 +8,7 @@ const Signup = () => {
     const [pw, setPw] = useState('');
     const [pwCheck, setPwCheck] = useState('');
     const [name, setName] = useState('');
-    const [bdate, setBdate] = useState('');
+/*    const [bdate, setBdate] = useState('');*/
 
     const onNameHandler = (e) => {
         setName(e.target.value);
@@ -22,9 +22,9 @@ const Signup = () => {
     const onCpwHandler = (e) => {
         setPwCheck(e.target.value);
     };
-    const onBdateHandler = (e) => {
+    /*const onBdateHandler = (e) => {
         setBdate(e.target.value);
-    };
+    };*/
     const onBtnClick = (e) => {
         if (pw !== pwCheck) {
             alert("비밀번호를 다시 확인 해주세요"); 
@@ -32,18 +32,17 @@ const Signup = () => {
             console.log("이름: " + name);
             console.log("아이디: " + id);
             console.log("비밀번호: " + pw);
-            console.log("생년월일: " + bdate);
+            /*console.log("생년월일: " + bdate);*/
 
             const body = {
                 idx: id,
                 name: name,
                 password : pw,
-                birthday: bdate,
             }
-            axios.post("/api/auth/join", body, {withCredentials: true})
+            axios.post("http://localhost:3001/api/auth/join", body,)
             .then((res) => {
                 console.log(res);
-              })
+            })
 
             alert("회원가입 완료");
         }
@@ -90,11 +89,11 @@ const Signup = () => {
                             required
                             placeholder="*비밀번호 확인"/><br/>
                     </div>
-                    <div>
+                    {/*<div>
                         <input required type="text" placeholder="생년월일(ex-2005.01.01)" value={bdate} onChange={onBdateHandler}/>
-                    </div>
+                    </div>*/}
                     <div>
-                        <button type="submit" >회원 가입</button>
+                        <button type="submit" onClick={onBtnClick}>회원 가입</button>
                         <p>계정이 있으신가요?</p>
                         <Link to='/'>
                             <p>로그인</p>
