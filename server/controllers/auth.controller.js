@@ -19,7 +19,6 @@ const join = async (req, res, next) => {
     res.status(200).json({success : "회원가입 성공"})
   } catch (err) {
     console.error(err);
-    return next(error);
   }
 }
 
