@@ -119,6 +119,9 @@
 
 
 .rightBtn button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
     background-color: #B4E197;
     border-radius: 150px;
@@ -131,4 +134,9 @@
 
 .rightBtn button:hover{
     background-color: #88d355;
+}
+.rightBtn p {
+    text-align: center;
+    font-size: small;
+    color: gray;
 }
