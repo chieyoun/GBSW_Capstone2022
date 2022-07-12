@@ -7,52 +7,60 @@ import Capstone from '../assets/Capstone.jpg'
 import menu from '../assets/menu.png';
 import Navbar from '../components/Navbar';
 import { Link } from "react-router-dom";
+import img1 from '../assets/img1.PNG';
+import img2 from '../assets/img2.PNG';
+import img3 from '../assets/img3.PNG';
+import img4 from '../assets/img4.PNG';
+import img5 from '../assets/img5.PNG';
 
 const data = [
   {
     id: 1,
-    src: Capstone,
-    title: 'title',
+    title: '캡스톤',
+    content: "content",
+    writer: "writer",
+    wdate: "2022-06-13",
+    src: img2,
   },
   {
     id: 2,
-    src: Capstone,
-    title: 'title',
+    title: 'Calendar (jsp)',
+    content: "content",
+    writer: "writer",
+    wdate: "2022-05-18",
+    src: img3,
   },
   {
     id: 3,
-    src: Capstone,
-    title: 'title',
+    title: '회원관리 프로그램 만들기 (jsp)',
+    content: "content",
+    writer: "writer",
+    wdate: "2022-04-29",
+    src: img1,
   }, 
   {
     id: 4,
-    src: Capstone,
-    title: 'title',
+    title: 'news viewer 만들기 (react)',
+    content: "content",
+    writer: "writer",
+    wdate: "2022-04-12",
+    src: img4,
   },
   {
     id: 5,
-    src: Capstone,
-    title: 'title',
+    title: 'router (react)',
+    content: "content",
+    writer: "writer",
+    wdate: "2022-03-23",
+    src: img5,
   },
   {
     id: 6,
+    title: 'c언어',
+    content: "content",
+    writer: "writer",
+    wdate: "2022-03-22",
     src: Capstone,
-    title: 'title',
-  },
-  {
-    id: 7,
-    src: Capstone,
-    title: 'title',
-  },
-  {
-    id: 8,
-    src: Capstone,
-    title: 'title',
-  },
-  {
-    id: 9,
-    src: Capstone,
-    title: 'title',
   },
 ]
 const Mainpage = () => {
@@ -99,7 +107,6 @@ const Mainpage = () => {
           <img src={plus} />
         </Link>
       </div>
-      
     </div>
   )
 }
