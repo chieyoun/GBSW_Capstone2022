@@ -31,12 +31,28 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="body">
             <div className="Container">
-                
+                <div className="form_container shadow">
+                    <div className="left">
+                        <h2>LearnChart</h2>
+                        <p>저희 LearnChart는 쉽게 자신의 학습 내용을 저장하고 결과를 볼 수 있습니다.</p>
+                    </div>
+                    <div className="right">
+                        <div className="rightInput">
+                        <input type="text" placeholder="아이디"/>
+                        <input type= "password" placeholder="비밀번호"/>
+                        </div>
+                    <div className="rightBtn">
+                        <Link to="/mainpage">
+                        <button type="submit">로그인</button>
+                        </Link>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
 }
 
-export default Login
+export default Login;
