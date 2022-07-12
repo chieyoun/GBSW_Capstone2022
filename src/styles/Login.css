@@ -123,8 +123,8 @@
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background-color: #B4E197;
-    border-radius: 150px;
+    background-color: #5fb328;
+    border-radius: 10px;
     width: 100px;
     outline: none;
     height: 40px;
@@ -133,9 +133,10 @@
 }
 
 .rightBtn button:hover{
-    background-color: #88d355;
+    background-color: rgb(95, 163, 50);
 }
 .rightBtn p {
+    margin-top: 5px;
     text-align: center;
     font-size: small;
     color: gray;
