@@ -7,7 +7,9 @@ import {
     PointElement,
     LineElement,
     Legend,
-    Tooltip
+    Tooltip,
+    chart,
+    registerables
 } from 'chart.js';
 import {Chart, Line} from 'react-chartjs-2'
 import Navbar from '../components/Navbar'
@@ -20,7 +22,8 @@ ChartJS.register(
     PointElement,
     LineElement,
     Legend,
-    Tooltip
+    Tooltip,
+    ...registerables
 );
 
 const labels = [

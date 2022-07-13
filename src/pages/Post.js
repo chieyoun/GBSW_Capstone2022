@@ -7,24 +7,23 @@ function Post() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const url = `/post`
-        // 요청이 시작 할 때에는 error 와 users 를 초기화하고
-        setError(null);
-        setUsers(null);
-        // loading 상태를 true 로 바꿉니다.
-        setLoading(true);
-        const response = await axios.get(url, { withCredentials: true }).then((res) => console.log(res));
-        setUsers(response.data); // 데이터는 response.data 안에 들어있습니다.
-      } catch (e) {
-        setError(e);
-      }
-      setLoading(false);
-    };
-
     fetchUsers();
   }, []);
+
+  const fetchUsers = async () => {
+    // 요청이 시작 할 때에는 error 와 users 를 초기화하고
+    // setError(null);
+    // setUsers(null);
+    // loading 상태를 true 로 바꿉니다.
+    // setLoading(true);
+    const response = await axios.get(`/api/post`, { withCredentials: true })
+    .then((res) => {
+      console.log(res)
+      setUsers(res.data);
+    });
+     // 데이터는 response.data 안에 들어있습니다.
+    // setLoading(false);
+  };
 
   if (loading) return <div>로딩중..</div>
   if (error) return <div>에러가 발생했습니다</div>;
@@ -33,9 +32,9 @@ function Post() {
     <ul>
       {users.map(user => (
         <li key={user.id}>
-          {user.title} ({user.wdate})
+          {user.title} ({user.updatedAt})
           {user.content}
-          {user.writer}
+          {user.UserId}
           {user.src}
         </li>
       ))}

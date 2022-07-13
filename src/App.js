@@ -16,7 +16,7 @@ class App extends Component {
           <Route path="/Mainpage" element={<Mainpage/>} />
           <Route path="/WritingPage" element={<WritingPage/>} />
           <Route path="/Mypage" element={<Mypage/>} />
-          <Route path="/Detail" element={<Detail />} />
+          <Route path="/Detail/:id" element={<Detail />} />
         </Routes>
       </div>
     );
