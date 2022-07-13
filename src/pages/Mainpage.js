@@ -16,7 +16,7 @@ import img6 from '../assets/img6.PNG';
 import axios from 'axios';
 
 const data = [
-<<<<<<< HEAD
+
     {
         id: 1,
         title: '캡스톤',
@@ -59,8 +59,8 @@ const data = [
         writer: "writer",
         wdate: "2022-03-22",
         src: Capstone
-    }
-=======
+    },
+
   {
     id: 1,
     title: '캡스톤',
@@ -109,11 +109,11 @@ const data = [
     wdate: "2022-03-22",
     src: img6,
   },
->>>>>>> b3d7bf7a21f0aa743ed0a40ac2b21ee1b270ebba
+
 ]
 
 const Mainpage = () => {
-<<<<<<< HEAD
+
     return (
         <div className="center1">
             {/* <header>
@@ -163,7 +163,7 @@ const Mainpage = () => {
             </div>
         </div>
     )
-=======
+
   const fetchUsers = async () => {
     const response = await axios.get("/api/post", {withCredentials: true})
     .then((res) => console.log(res));
@@ -216,7 +216,6 @@ const Mainpage = () => {
     </div>
   </div>
 )
->>>>>>> b3d7bf7a21f0aa743ed0a40ac2b21ee1b270ebba
 }
 
 export default Mainpage
