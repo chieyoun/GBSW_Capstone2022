@@ -3,6 +3,8 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 import { Component } from "react";
 import { Login, Mainpage, Mypage,  Signup } from "./pages";
 import WritingPage from "./pages/WritingPage";
+import Users from "./pages/Post";
+import Detail from "./pages/Detail";
 
 class App extends Component {
   render() {
@@ -14,6 +16,7 @@ class App extends Component {
           <Route path="/Mainpage" element={<Mainpage/>} />
           <Route path="/WritingPage" element={<WritingPage/>} />
           <Route path="/Mypage" element={<Mypage/>} />
+          <Route path="/Detail" element={<Detail />} />
         </Routes>
       </div>
     );
@@ -21,4 +24,3 @@ class App extends Component {
 };
 
 export default App;
-

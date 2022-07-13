@@ -16,18 +16,13 @@ function WritingPage() {
 
   const [viewContent, setViewContent] = useState([]);
 
-  useEffect(() => {
-      Axios.get('http://localhost:3001/api/get').then((response)=>{
-      setViewContent(response.data);
-    })
-  },[viewContent])
-
   const submitReview = ()=>{
-    Axios.post('http://localhost:3001/api/insert', {
+    Axios.post('/api/post/write', {
       title: movieContent.title,
       content: movieContent.content
-    }).then(()=>{
-      alert('등록 완료!');
+    }).then((res)=>{
+      console.log(res);
+      // alert('등록 완료!');
     })
   };
 

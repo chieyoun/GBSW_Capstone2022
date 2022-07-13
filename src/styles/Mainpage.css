@@ -27,13 +27,13 @@ header div {
     display: inline-block;
     text-align: center;
     width: 70%;
-    vertical-align: top;
 }
 
 .post {
     display: inline-block;
     width: 300px;
     padding-bottom: 100px;
+    vertical-align: top;
 }
 
 .post Img {

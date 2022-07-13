@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import '../styles/Mainpage.css';
 import logoImg from '../assets/logoImg.png';
 import plus from '../assets/plus.png'
@@ -12,6 +12,8 @@ import img2 from '../assets/img2.PNG';
 import img3 from '../assets/img3.PNG';
 import img4 from '../assets/img4.PNG';
 import img5 from '../assets/img5.PNG';
+import img6 from '../assets/img6.PNG';
+import axios from 'axios';
 
 const data = [
   {
@@ -56,59 +58,67 @@ const data = [
   },
   {
     id: 6,
-    title: 'c언어',
+    title: '전화번호부 (java)',
     content: "content",
     writer: "writer",
     wdate: "2022-03-22",
-    src: Capstone,
+    src: img6,
   },
 ]
+
 const Mainpage = () => {
+  const fetchUsers = async () => {
+    const response = await axios.get("/api/post", {withCredentials: true})
+    .then((res) => console.log(res));
+  }
+  useEffect(() => {
+    fetchUsers();
+  }, []);
   return (
-    <div className="center1">
-      {/* <header>
-        <div className="lineImg">
-          <div className="lineImgSort">
-            <img src={menu} />
-          </div>
-        </div>
-
-        <div className="logo">
-          <img src={logoImg} alt="로고" />
-        </div>
-
-        <div className="profile">
-            <img src={profileImg} alt="프로필" />
-        </div>
-      </header> */}
-
-      <Navbar />
-
-      <div className="headerSort"></div>  
-
-      <div class="postDiv">
-        <div className="postSort">
-          {
-            data.map((post) => (
-              <div key={post.id} class="post">
-                <div className="postImg">
-                  <img src={post.src} alt="타이틀 이미지" />
-                </div>
-                <div className="text">
-                  {post.title}
-                </div>
-              </div>
-            ))
-          }
+  <div className="center1">
+    {/* <header>
+      <div className="lineImg">
+        <div className="lineImgSort">
+          <img src={menu} />
         </div>
       </div>
-      <div className="btn">
-        <Link to='/WritingPage'>
-          <img src={plus} />
-        </Link>
+
+      <div className="logo">
+        <img src={logoImg} alt="로고" />
+      </div>
+
+      <div className="profile">
+          <img src={profileImg} alt="프로필" />
+      </div>
+    </header> */}
+
+    <Navbar />
+
+    <div className="headerSort"></div>  
+
+    <div class="postDiv">
+      <div className="postSort">
+        {
+          data.map((post) => (
+            <div key={post.id} class="post">
+              <div className="postImg">
+                <img src={post.src} alt="타이틀 이미지" />
+              </div>
+              <div className="text">
+                {post.title}
+              </div>
+            </div>
+          ))
+        }
       </div>
     </div>
-  )
+    <div className="btn">
+      <Link to='/WritingPage'>
+        <img src={plus} />
+      </Link>
+    </div>
+  </div>
+)
 }
 
 export default Mainpage
