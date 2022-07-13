@@ -3,12 +3,12 @@ dotenv.config();
 const env = process.env;
 
 const development = {
-  username: "root",
+  username: "username",
   password: env.MYSQL_PASSWORD,
   database: "capstonedb",
-  host: "localhost",
+  host: "3.39.136.224",
   dialect: "mysql",
-  port: 3307,
+  port: 3306,
   timezone : "+09:00",
   dialectOptions: {
     charset: 'utf8mb4',
