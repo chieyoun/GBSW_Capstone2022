@@ -1,7 +1,136 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
    
+=======
+.center1 {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #B4E197;
+    height: 85px;
+}
+
+header div {
+    text-align: center;
+}
+
+.headerSort {
+    text-align: center;
+    height: 150px;
+}
+
+
+
+.postDiv {
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+}
+
+.post {
+    display: inline-block;
+    width: 300px;
+    padding-bottom: 100px;
+    vertical-align: top;
+}
+
+.post Img {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.postImg {
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.post .text {
+    width: 300px;
+    height: 100px;
+    cursor: pointer;
+}
+
+
+
+
+
+.img {
+    text-align: center;
+    border: 1px solid black;
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+
+
+
+
+.arrow {
+    width: 50px;
+    float: right;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.lineImg {
+    display: inline-block;
+    float: left;
+    width: 33%;
+    text-align: left;
+}
+
+.lineImg div {
+    display: inline-block;
+    padding-top: 25px;
+}
+
+.lineImg img {
+    cursor: pointer;
+    padding-left: 30px;
+    width: 40px;
+}
+
+.logo {
+    width: 33%;
+    text-align: center;
+    float: left;
+}
+
+.logo img {
+    width: 50px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.profile {
+    width: 33%;
+    text-align: right;
+    float: right;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 18px;
+
+>>>>>>> b3d7bf7a21f0aa743ed0a40ac2b21ee1b270ebba
 }
 
 .btn {

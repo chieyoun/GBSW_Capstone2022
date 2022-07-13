@@ -16,14 +16,14 @@ const Login = () => {
 
     // useEffect(() => {   loadData(); }, [])
 
-    const loadData = async (e) => {
+    const loadData = (e) => {
         // e.preventDefault();
 
         let data = {
             user: ""
         }
         axios
-            .post("http://127.0.0.1:3307/login", data, {withCredentials: true})
+            .post("/login", data, {withCredentials: true})
             .then((res) => {
                 console.log(res);
             })
