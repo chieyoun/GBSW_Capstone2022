@@ -30,7 +30,7 @@ const upload = multer({
 
 router.get('/', controller.getPosts);
 router.get('/:id', controller.getPost);
-router.post('/write', isLoggedIn, upload.single('img'), controller.post);
+router.post('/write', upload.single('img'), controller.post);
 /* router.post('/edit/:id', isLoggedIn, controller.edit);
 router.get('/remove/:id', isLoggedIn, controller.remove); */
 
