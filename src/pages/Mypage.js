@@ -9,10 +9,7 @@ import {
     Legend,
     Tooltip
 } from 'chart.js';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
-import {Chart} from 'react-chartjs-2'
+import {Chart, Line} from 'react-chartjs-2'
 import Navbar from '../components/Navbar'
 import '../styles/Mypage.css'
 import profile from '../assets/profile.png'
@@ -73,6 +70,25 @@ export const data = {
     ]
 };
 
+export const options = {
+    // 옵션 (1)
+    responsive: false,
+    // 옵션 (2)
+    // 옵션 (3)
+    scales: {
+      x: {
+        grid: {
+        //   display: false,
+        },
+      },
+      y: {
+        grid: {
+          color: "#E3E3E3",
+        },
+      },
+    },
+}
+
 const Mypage = () => {
     const [fileImage, setFileImage] = useState(profile);
     const [show, setShow] = useState(false);
@@ -81,43 +97,54 @@ const Mypage = () => {
     const saveFileImage = (e) => {
         setFileImage(URL.createObjectURL(e.target.files[0]))
     }
+    const ChgFile = () => {
+        const file = document.getElementById("file");
+        file.click();
+    }
+    function readImage(input) {
+        const file = input.files[0];
+        if(input.files && file) {
+          const reader = new FileReader()
+          reader.onload = e => {
+            setFileImage(e.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      };
+
     return (
         <div className='all'>
             <div className='header'>
                 <Navbar/>
             </div>
-            <div className='profile'>
-                {
-                    fileImage && 1
-                        ? <img
-                                alt='sample'
-                                src={fileImage}
-                                style={{
-                                    margin: "auto",
-                                    borderRadius: "500px",
-                                    width: "8em",
-                                    height: "8em"
-                                }}/>
-                        : <></>
-                        
-                }
-                <input accept='image/*' type="file" onChange={saveFileImage}/>
-                <Button type='submit' onClick={handleShow}>이미지 변경</Button>
-            </div>
             <div>
-              <Modal>
-
-              </Modal>
-            </div>
-            <div
-                className='chart'
-                style={{
-                    position: 'relative',
-                    top: '15rem',
-                    left: '15%',
-                    margin: '0 aut0'
-                }}>
-                <Chart type='bar' data={data}/>
+                <div  className='profile'>
+                    <div className='profile-img'>
+                        {
+                            fileImage?
+                                <img
+                                    src={fileImage}
+                                    style={{
+                                        borderRadius: "500px",
+                                        width: "8em",
+                                        height: "8em"
+                                    }}/>
+                                : ''
+                        }
+                        <button type='button' className='img-button' onClick={ChgFile}>이미지 변경</button>
+                        <input type="file" id="file" className='hidden' onChange={(e) => {readImage(e.target)}} />
+                    </div>
+                    <div className='profile-text'>
+                        <p>대충 닉네임</p>
+                        <p>대충 소개</p>
+                    </div>
+                </div>
+                <div>
+                    <h1 className='chart-header'>나의 학습량</h1>
+                    <div className='chart'>
+                        <Line options={options} data={data} width="600px" height="500px" />
+                    </div>
+                </div>
             </div>
         </div>
 

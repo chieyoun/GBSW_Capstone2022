@@ -1,5 +1,5 @@
 [build]
-command = "npm run build && npm run export"
+command = "npx run build && npx run export && npx start"
 publish = "out"
 base="/"
 
