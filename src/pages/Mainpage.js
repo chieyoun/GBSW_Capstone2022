@@ -7,12 +7,7 @@ import Capstone from '../assets/Capstone.jpg'
 import menu from '../assets/menu.png';
 import Navbar from '../components/Navbar';
 import {Link} from "react-router-dom";
-import img1 from '../assets/img1.PNG';
-import img2 from '../assets/img2.PNG';
-import img3 from '../assets/img3.PNG';
-import img4 from '../assets/img4.PNG';
-import img5 from '../assets/img5.PNG';
-import img6 from '../assets/img6.PNG';
+
 import axios from 'axios';
 
 // const data = [
@@ -130,25 +125,23 @@ const Mainpage = () => {
 
           <div className="headerSort"></div>
           <div className="Listsort">
-          <table>
-            <thead>
-              <tr>
-                <th>제목</th>
-                <th>날짜</th>
-              </tr>
-            </thead>
+          <div className="flex flex-col w-full justify-center items-center w-[55rem]">
+            <div className="flex flex-row border-b-2 p-3 justify-center items-center">
+              <div className="w-[40rem] flex  justify-center items-center">제목</div>
+              <div className="w-[12rem] flex justify-center items-center">날짜</div>
+            </div>
+            <div  class="post">
             {data.map((data) => (
-                  <tbody key={data.id} class="post">
-                    <tr>
-                      
-                    <Link to={`/detail/${data.id}`}>
-                      <td>{data.title}</td>
-                      <td>{data.updatedAt}</td>
-                    </Link>
-                    </tr>
-                  </tbody>
+              <Link key={data.id} className="" to={`/detail/${data.id}`}>
+                <div className="flex flex-row w-full justify-center items-center border-b-2 p-3">
+                  <div>{data.id}</div>
+                  <div className="w-[40rem] flex pl-10 justify-start items-center">{data.title}</div>
+                  <div className="w-[12rem] flex  justify-center items-center">{data.updatedAt}</div>
+                </div>
+              </Link>
             ))}
-          </table>
+          </div>
+          </div>
           </div>
           <div className="btn">
               <Link to='/WritingPage'>

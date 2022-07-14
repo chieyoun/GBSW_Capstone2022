@@ -5,6 +5,7 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import ReactHtmlParser from 'html-react-parser';
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
 const API_URL = "https://77em4-8080.sse.codesandbox.io";
 const UPLOAD_ENDPOINT = "upload_files";
 
@@ -104,7 +105,9 @@ function WritingPage() {
           }}
         />
       </div>
+      <Link to="/mainpage">
       <button className="submit-button" onClick={submitReview}>저장</button>
+      </Link>
     </div>
   );
 }

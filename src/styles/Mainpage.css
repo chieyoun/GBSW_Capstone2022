@@ -13,9 +13,6 @@ header {
     height: 85px;
 }
 
-
-
-
 .btn {
     position: fixed;
     bottom: 10%;
@@ -26,11 +23,10 @@ header {
     border-radius: 50px;
 }
 .Listsort th{
-
     border-bottom: solid 1px black;
     color : #ababab;
 }
-.post td {
+.Listsort td {
     border-bottom: solid 1px #ababab;
     width: 500px;
     height: 50px;
@@ -40,5 +36,5 @@ header {
     margin-top: 100px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+
 }
