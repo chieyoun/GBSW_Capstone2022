@@ -1,9 +1,7 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Post from "./Post";
 
 const Detail = () => {
-
     return(
         <div>
             <Post />
