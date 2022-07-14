@@ -46,26 +46,26 @@ export const data = {
             borderWidth: 2,
             fill: false,
             data: [
+                6,
+                3,
+                8,
                 10,
                 7,
-                28,
-                32,
-                57,
-                21,
-                10
+                2,
+                9
             ]
         }, {
             type: 'bar',
             label: '게시글',
             backgroundColor: '#B4E197',
             data: [
+                6,
+                3,
+                8,
                 10,
                 7,
-                28,
-                32,
-                57,
-                21,
-                10
+                2,
+                9
             ],
             borderColor: 'white',
             borderWidth: 2
