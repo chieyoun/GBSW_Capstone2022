@@ -115,7 +115,7 @@ const UploadAdapter = () => {
             // ...
         } )
         .catch( error => {
-            console.log( error );
+            console.log(error );
         } );
 }
 

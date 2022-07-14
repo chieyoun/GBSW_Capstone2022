@@ -54,7 +54,7 @@ function Post() {
             </div>
             
             <div className='contents'>
-                <p>{user.content}</p>
+                <p dangerouslySetInnerHTML={ {__html: user.content}}></p>
             </div>
             <div className='pagination'>
                 <Link to={`/detail/${user.id-1}`} >
