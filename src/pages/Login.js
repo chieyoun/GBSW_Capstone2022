@@ -29,7 +29,6 @@ const Login = () => {
                 console.log(res);
             })
             window.location.href = "/mainpage";
-
     }
 
     return (

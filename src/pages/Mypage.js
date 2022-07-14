@@ -138,8 +138,7 @@ const Mypage = () => {
                         <input type="file" id="file" className='hidden' onChange={(e) => {readImage(e.target)}} />
                     </div>
                     <div className='profile-text'>
-                        <p>대충 닉네임</p>
-                        <p>대충 소개</p>
+                        <p>test</p>
                     </div>
                 </div>
                 <div>
