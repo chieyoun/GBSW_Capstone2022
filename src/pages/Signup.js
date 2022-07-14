@@ -39,7 +39,7 @@ const Signup = () => {
                 name: name,
                 password : pw,
             }
-            axios.post("http://localhost:3001/api/auth/join", body,)
+            axios.post("/api/auth/join", body,)
             .then((res) => {
                 console.log(res);
             })
