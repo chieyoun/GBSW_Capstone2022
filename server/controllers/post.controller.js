@@ -30,7 +30,6 @@ const post = async (req, res) => {
     await Post.create({
       title,
       content,
-      UserId : req.user.id
     })
     res.status(200).json({ message : "글 등록 성공"});
   } catch (err) {
@@ -60,11 +59,9 @@ const remove = async (req, res) => {
   const id = req.params.id;
   try {
     await Post.destroy({ where: {id}})
-
     res.status(200).json({ message : "글 삭제 성공"});
   } catch (err) {
     console.error(err);
-
     res.status(400).json({ message : "글 삭제 실패"})
   }
 }
