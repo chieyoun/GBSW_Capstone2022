@@ -33,14 +33,14 @@ router.post('/login', isNotLoggedIn, controller.login);
 router.get('/logout', isLoggedIn, controller.logout);
 
 
-router.get('/get', async (req, res) => {
+/* router.get('/get', async (req, res) => {
   try {
     const users = await User.findAll();
     res.json({users});
   } catch( err ){ 
     console.error(err);
   }
-})
+}) */
 
 
 module.exports = router;
