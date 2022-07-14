@@ -17,10 +17,11 @@ const Login = () => {
     // useEffect(() => {   loadData(); }, [])
 
     const loadData = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
 
-        let data = {
-            user: ""
+        const data = {
+            idx : id,
+            password: pw,
         }
         axios
             .post("/api/auth/login", data, {withCredentials: true})
@@ -40,12 +41,12 @@ const Login = () => {
                     </div>
                     <div className="right">
                         <div className="rightInput">
-                            <input type="text" placeholder="아이디"/>
-                            <input type="password" placeholder="비밀번호"/>
+                            <input type="text" placeholder="아이디" onChange={onIdHandler}/>
+                            <input type="password" placeholder="비밀번호" onChange={onpwHandler}/>
                         </div>
                         <div className="rightBtn">
                             <Link to="/mainpage">
-                                <button type="submit">로그인</button>
+                                <button type="submit" onClick={loadData}>로그인</button>
                             </Link>
                             <p>계정이 없으신가요?</p>
                             <Link to="/signup">

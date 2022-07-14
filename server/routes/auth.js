@@ -4,6 +4,7 @@ const controller = require('../controllers/auth.controller');
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
+const { User } = require('../models');
 
 const router = express.Router();
 
@@ -30,6 +31,16 @@ const upload = multer({
 router.post('/join', isNotLoggedIn, controller.join);
 router.post('/login', isNotLoggedIn, controller.login);
 router.get('/logout', isLoggedIn, controller.logout);
+
+
+router.get('/get', async (req, res) => {
+  try {
+    const users = await User.findAll();
+    res.json({users});
+  } catch( err ){ 
+    console.error(err);
+  }
+})
 
 
 module.exports = router;
