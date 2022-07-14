@@ -41,10 +41,18 @@ function Post() {
     return (
         <div>
           <Navbar/>
+          
             <div className='title'>
                 <h2>{user.title}</h2>
+                <div className='remove'>
+                  <div className='removeSort'>
+                    <button onClick={Delete}>삭제하기</button>
+                  </div>
+                </div>
                 <p>({user.updatedAt})</p>
+                
             </div>
+            
             <div className='contents'>
                 <p>{user.content}</p>
             </div>
@@ -62,9 +70,7 @@ function Post() {
                 </Link>
               </ul>
             </div>
-            <div className='remove'>
-              <button onClick={Delete}>삭제다용~</button>
-            </div>
+            
         </div>
 
     );
