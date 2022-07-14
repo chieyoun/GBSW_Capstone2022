@@ -60,6 +60,8 @@ function Post() {
                 <Link to={`/detail/${user.id-1}`} >
                     <div className='pageitem' aria-hidden="true">&laquo;</div>
                 </Link>
+
+                    <div className='pageitem2' aria-hidden="true"></div>
                 <Link to={`/detail/${user.id+1}`} >
                   <div className='pageitem' aria-hidden="true">&raquo;</div>
                 </Link>

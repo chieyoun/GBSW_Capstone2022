@@ -58,8 +58,6 @@ const Mainpage = () => {
                   <img src={plus}/>
               </Link>
           </div>
-          <div className="pagination">
-          </div>
       </div>
   )
 }
