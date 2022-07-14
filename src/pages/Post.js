@@ -1,45 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
+import {useParams} from 'react-router-dom';
 import axios from 'axios';
-
+import '../styles/Post.css';
+import Navbar from '../components/Navbar';
 function Post() {
-  const [users, setUsers] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const {id} = useParams();
 
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+    useEffect(() => {
+        fetchUsers();
+    }, []);
 
-  const fetchUsers = async () => {
-    // 요청이 시작 할 때에는 error 와 users 를 초기화하고
-    // setError(null);
-    // setUsers(null);
-    // loading 상태를 true 로 바꿉니다.
-    // setLoading(true);
-    const response = await axios.get(`/api/post`, { withCredentials: true })
-    .then((res) => {
-      console.log(res)
-      setUsers(res.data);
-    });
-     // 데이터는 response.data 안에 들어있습니다.
-    // setLoading(false);
-  };
+    const fetchUsers = async () => {
+        // 요청이 시작 할 때에는 error 와 users 를 초기화하고 setError(null); setUsers(null); loading
+        // 상태를 true 로 바꿉니다. setLoading(true);
+        const response = await axios
+            .get(`/api/post/${id}`, {withCredentials: true})
+            .then((res) => {
+                console.log(res)
+                setUser(res.data);
+            });
+        // 데이터는 response.data 안에 들어있습니다. setLoading(false);
+    };
 
-  if (loading) return <div>로딩중..</div>
-  if (error) return <div>에러가 발생했습니다</div>;
-  if (!users) return null;
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>
-          {user.title} ({user.updatedAt})
-          {user.content}
-          {user.UserId}
-          {user.src}
-        </li>
-      ))}
-    </ul>
-  );
+    if (loading) 
+        return <div>로딩중..</div>
+    if (error) 
+        return <div>에러가 발생했습니다</div>;
+    if (!user) 
+        return null;
+    return (
+        <div>
+          <Navbar/>
+            <div className='title'>
+                <h2>{user.title}</h2>
+                <p>({user.updatedAt})</p>
+            </div>
+            <div className='contents'>
+                <p>{user.content}</p>
+            </div>
+        </div>
+
+    );
 }
 
 export default Post;
