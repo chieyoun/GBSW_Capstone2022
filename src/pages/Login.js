@@ -23,7 +23,7 @@ const Login = () => {
             user: ""
         }
         axios
-            .post("/login", data, {withCredentials: true})
+            .post("/api/auth/login", data, {withCredentials: true})
             .then((res) => {
                 console.log(res);
             })
@@ -51,7 +51,6 @@ const Login = () => {
                             <Link to="/signup">
                                 <p>회원가입</p>
                             </Link>
-
                         </div>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ const upload = multer({
   limits : { fileSize: 5 * 1024 * 1024 },
 })
 
-router.post('/join', isNotLoggedIn, upload.single('img'), controller.join);
+router.post('/join', isNotLoggedIn, controller.join);
 router.post('/login', isNotLoggedIn, controller.login);
 router.get('/logout', isLoggedIn, controller.logout);
 

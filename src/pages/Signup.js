@@ -39,14 +39,13 @@ const Signup = () => {
                 name: name,
                 password : pw,
             }
-            axios.post("http://localhost:3001/api/auth/join", body,)
+            axios.post("/api/auth/join", body,)
             .then((res) => {
                 console.log(res);
             })
 
             alert("회원가입 완료");
         }
-
     }
 
     return (
