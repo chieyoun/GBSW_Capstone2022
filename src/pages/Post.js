@@ -56,6 +56,9 @@ function Post() {
                   <div className='pageitem' aria-hidden="true">&raquo;</div>
                 </Link>
             </div>
+            <div className='remove'>
+              <button onClick={Delete}>삭제다용~</button>
+            </div>
             
         </div>
 

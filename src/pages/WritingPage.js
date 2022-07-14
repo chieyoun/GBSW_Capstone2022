@@ -24,8 +24,9 @@ function WritingPage() {
     }).then((res)=>{
       console.log(res);
       // alert('등록 완료!');
-    })
-  };
+    }) 
+    window.location.href = "/mainpage";
+  }
 
   const getValue = e => {
     const { name, value } = e.target;
