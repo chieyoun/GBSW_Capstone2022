@@ -106,9 +106,7 @@ function WritingPage() {
           }}
         />
       </div>
-      <Link to="/mainpage">
       <button className="submit-button" onClick={submitReview}>저장</button>
-      </Link>
     </div>
   );
 }

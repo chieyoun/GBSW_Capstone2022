@@ -32,7 +32,7 @@ router.get('/', controller.getPosts);
 router.get('/:id', controller.getPost);
 router.post('/write', upload.single('img'), controller.post);
 /* router.post('/edit/:id', isLoggedIn, controller.edit); */
-router.delete('/remove/:id', isLoggedIn, controller.remove);
+router.delete('/remove/:id', controller.remove);
 
 
 // >>>>>>> 8f12b56d8524f4e054f84e8c1050fc4745b6aeb4
