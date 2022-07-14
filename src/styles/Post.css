@@ -31,3 +31,25 @@
     
 
 }
+
+
+
+
+
+.remove {
+    margin: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.removeSort {
+    width: 100px;
+    background-color: #B4E197;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+}
