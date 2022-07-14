@@ -28,6 +28,7 @@ const Login = () => {
             .then((res) => {
                 console.log(res);
             })
+            window.location.href = "/mainpage";
 
     }
 
@@ -45,9 +46,8 @@ const Login = () => {
                             <input type="password" placeholder="비밀번호" onChange={onpwHandler}/>
                         </div>
                         <div className="rightBtn">
-                            <Link to="/mainpage">
+
                                 <button type="submit" onClick={loadData}>로그인</button>
-                            </Link>
                             <p>계정이 없으신가요?</p>
                             <Link to="/signup">
                                 <p>회원가입</p>
