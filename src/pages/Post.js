@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../styles/Post.css';
 import Navbar from '../components/Navbar';
 function Post() {
@@ -10,20 +11,26 @@ function Post() {
     const {id} = useParams();
 
     useEffect(() => {
-        fetchUsers();
-    }, []);
+      fetchUsers();
+    }, [id]);
 
     const fetchUsers = async () => {
-        // 요청이 시작 할 때에는 error 와 users 를 초기화하고 setError(null); setUsers(null); loading
-        // 상태를 true 로 바꿉니다. setLoading(true);
-        const response = await axios
-            .get(`/api/post/${id}`, {withCredentials: true})
-            .then((res) => {
-                console.log(res)
-                setUser(res.data);
-            });
-        // 데이터는 response.data 안에 들어있습니다. setLoading(false);
+      const response = await axios
+        .get(`/api/post/${id}`, {withCredentials: true})
+        .then((res) => {
+            console.log(res)
+            setUser(res.data);
+        });
     };
+
+    const Delete = (e) => {
+      e.preventDefault();
+      axios.delete(`/api/post/remove/${id}`, {withCredentials : true})
+      .then((res) => {
+        console.log(res);
+      })
+      window.location.href = "/mainpage";
+    }
 
     if (loading) 
         return <div>로딩중..</div>
@@ -40,6 +47,23 @@ function Post() {
             </div>
             <div className='contents'>
                 <p>{user.content}</p>
+            </div>
+            <div className='pagination'>
+              <ul>
+                <Link to={`/detail/${user.id-1}`} >
+                  <li className='pageitem'>
+                    <span aria-hidden="true">&laquo;</span>
+                  </li>
+                </Link>
+                <Link to={`/detail/${user.id+1}`} >
+                  <li className='pageitem'>
+                  <span aria-hidden="true">&raquo;</span>
+                  </li>
+                </Link>
+              </ul>
+            </div>
+            <div className='remove'>
+              <button onClick={Delete}>삭제다용~</button>
             </div>
         </div>
 
