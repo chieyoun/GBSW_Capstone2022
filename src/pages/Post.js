@@ -49,22 +49,14 @@ function Post() {
                 <p>{user.content}</p>
             </div>
             <div className='pagination'>
-              <ul>
                 <Link to={`/detail/${user.id-1}`} >
-                  <li className='pageitem'>
-                    <span aria-hidden="true">&laquo;</span>
-                  </li>
+                    <div className='pageitem' aria-hidden="true">&laquo;</div>
                 </Link>
                 <Link to={`/detail/${user.id+1}`} >
-                  <li className='pageitem'>
-                  <span aria-hidden="true">&raquo;</span>
-                  </li>
+                  <div className='pageitem' aria-hidden="true">&raquo;</div>
                 </Link>
-              </ul>
             </div>
-            <div className='remove'>
-              <button onClick={Delete}>삭제다용~</button>
-            </div>
+            
         </div>
 
     );
