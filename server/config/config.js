@@ -4,7 +4,7 @@ const env = process.env;
 
 const development = {
   username: "username",
-  password: env.MYSQL_PASSWORD,
+  password: process.env.MYSQL_PASSWORD,
   database: "capstonedb",
   host: "3.39.136.224",
   dialect: "mysql",
